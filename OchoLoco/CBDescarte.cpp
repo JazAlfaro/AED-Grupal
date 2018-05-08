@@ -13,7 +13,6 @@ bool CBDescarte::Insert(CNodo<CCarta>* p)
 		m_palo = p->m_data.m_palo;
 		m_num = p->m_data.m_numero;
 		m_lista.Insert(p);
-		return true;
 	}
 	else
 	{
@@ -21,9 +20,8 @@ bool CBDescarte::Insert(CNodo<CCarta>* p)
 		cin >> m_palo;
 		m_num = 8;
 		m_lista.Insert(p);
-		return true;
 	}
-	return false;
+	return true;
 }
 
 CBDescarte::~CBDescarte()

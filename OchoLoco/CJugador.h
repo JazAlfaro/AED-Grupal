@@ -11,7 +11,7 @@ public:
 	int puntuacion;
 	void calcular_puntacion();
 	bool Comparar(CNodo<CCarta> *p, int num, std::string palo);
-	void Turno(CLista<CCarta> &b, CBDescarte &d);
+	void Turno(CLista<CCarta> &b, int &bsize, CBDescarte &d);
 	~CJugador();
 };
 

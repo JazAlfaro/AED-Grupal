@@ -35,7 +35,7 @@ bool CJugador::Comparar(CNodo<CCarta> *p, int num, std::string palo)
 		return false;
 }
 
-void CJugador::Turno(CLista<CCarta>& b, CBDescarte &d)
+void CJugador::Turno(CLista<CCarta>& b, int &bsize, CBDescarte &d)
 {
 	int pos;
 	CNodo<CCarta> **p = &m_lista.m_head;
@@ -60,8 +60,16 @@ void CJugador::Turno(CLista<CCarta>& b, CBDescarte &d)
 	}
 	else
 	{
-		m_lista.Insert(b.m_head);
-		b.Pop();
-		Turno(b, d);
+		if (bsize == 0)
+		{
+			return;
+		}
+		else
+		{
+			m_lista.Insert(b.m_head);
+			b.Pop();
+			bsize--;
+			Turno(b, bsize, d);
+		}
 	}
 }

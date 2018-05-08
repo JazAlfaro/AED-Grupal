@@ -34,6 +34,7 @@ void CBaraja::Repartir(CJugador ju[], int tam)
 void CBaraja::Barajear()
 {
 	m_lista.Pop();
+	m_size--;
 }
 
 CBaraja::~CBaraja()
