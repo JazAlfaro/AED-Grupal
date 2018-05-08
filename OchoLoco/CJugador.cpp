@@ -1,7 +1,9 @@
-
 #include "stdafx.h"
 #include "CJugador.h"
 
+
+//Se cambiado el constructor,ahora cuando se crea el jugador su puntación empieza con 0
+//Se creo la funcion calcular puntuacion, esta se utilizara cuando ya no haya
 CJugador::CJugador()
 {
 	puntuacion = 0;
@@ -24,22 +26,41 @@ void CJugador::calcular_puntacion()
 		else
 			puntuacion += i->m_data.m_numero;
 }
-/*
-void CJugador::Turno(CLista<CCarta> d, CBaraja b)
+
+bool CJugador::Comparar(CNodo<CCarta> *p, int num, std::string palo)
 {
-	cout << "Ingresa la pos ";
-	int x;
+	if (p != NULL)
+		return ((p->m_data.m_numero == num) || (p->m_data.m_palo == palo) || (p->m_data.m_numero == 8));
+	else
+		return false;
+}
+
+void CJugador::Turno(CLista<CCarta>& b, CBDescarte &d)
+{
+	int pos;
+	CNodo<CCarta> **p = &m_lista.m_head;
+
+	cout << endl << " Descarte ";
+	d.m_lista.m_head->m_data.Print();
+	cout << endl;
 	m_lista.Print();
-	cout << "54.- Para sacar carta" << endl;
-	cin >> x;
-	if (x != 54)
+	cout << "  54.- Para sacar carta" << endl << endl;
+
+	do {
+		cout << "Ingresa la pos ";
+		cin >> pos;
+		m_lista.Find(pos, p);
+	} while ((pos != 54) && !Comparar(*p, d.m_num, d.m_palo));
+	
+	if (pos != 54)
 	{
-		CNodo<CCarta> **p;
-		if (m_lista.Find(x, p))
-		{
-			if ((*p)->m_data.m_numero == 8)
-			d.Insert(*p);
-			m_lista.Remove((*p)->m_data.m_numero, (*p)->m_data.m_palo);
-		}
+		d.Insert(*p);
+		m_lista.Remove((*p)->m_data.m_numero, (*p)->m_data.m_palo);
 	}
-}*/
+	else
+	{
+		m_lista.Insert(b.m_head);
+		b.Pop();
+		Turno(b, d);
+	}
+}

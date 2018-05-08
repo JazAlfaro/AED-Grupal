@@ -1,8 +1,5 @@
-#ifndef CLISTA_H
-#define CLISTA_H
 #pragma once
 #include "CCarta.h"
-#include "CNodo.h"
 
 template <class T>
 class CLista
@@ -17,10 +14,8 @@ public:
 	bool Insert(int num, std::string palo, int pos);
 	bool Insert(CNodo<T> *p);
 	bool Remove(int num, std::string palo);
-	void Swap(CNodo<T> **&t1, CNodo<T> **&t2);
+	void Swap(CNodo<CCarta> *&t1, CNodo<CCarta> *&t2);
 
 	bool Pop();
 	~CLista();
 };
-
-#endif 

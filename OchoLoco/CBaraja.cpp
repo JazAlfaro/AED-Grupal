@@ -1,7 +1,5 @@
 #include "stdafx.h"
 
-#include "CBaraja.h"
-
 CBaraja::CBaraja()
 {
 	srand(time(NULL));
@@ -33,33 +31,10 @@ void CBaraja::Repartir(CJugador ju[], int tam)
 	}
 }
 
-void CBaraja::Barajear(int a, int b)
+void CBaraja::Barajear()
 {
-	CNodo<CCarta> **t1, **t2;
-	//for (int i = 0; i < 1; i++)
-	//{
-		cout << a << " " << b << endl;
-		t1 = NULL;
-		t2 = NULL;
-		m_lista.Find(a, t1);
-		m_lista.Find(b, t2);
-		
-		CNodo<CCarta> *t3 = *t1;
-		CNodo<CCarta> *t4 = *t2;
-		CNodo<CCarta> *t5 = t3->m_next;
-		CNodo<CCarta> *t6 = t4->m_next;
-
-		*t1 = t4;
-		(*t1)->m_next = t3->m_next;
-		*t2 = t3;
-		t3->m_next = t6;
-		a = 0;
-		b = 0;
-	//}
-	//cout << m_size << endl;
+	m_lista.Pop();
 }
-
-
 
 CBaraja::~CBaraja()
 {

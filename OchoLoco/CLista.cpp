@@ -11,15 +11,12 @@ template <class T>
 void CLista<T>::Print()
 {
 	int i = 0;
-	cout << "cabeza";
-	m_head->m_data.Print();
 	for (CNodo<T> *t = m_head; t != NULL; t = t->m_next)
 	{
-		cout << i;
+		cout << "  " << i << ".- ";
 		t->m_data.Print();
 		i++;
 	}
-	cout << endl;
 }
 
 template <class T>
@@ -32,11 +29,15 @@ bool CLista<T>::Find(int num, std::string palo, CNodo<T> **&p)
 template <class T>
 bool CLista<T>::Find(int pos, CNodo<T> **&p)
 {
+	int i;
 	p = &m_head;
-	for (int i = 0; i < pos; i++)
+	for (i = 0; *p && i < pos; i++)
 		p = &(*p)->m_next;
 
-	return 1;
+	if (i == pos)
+		return true;
+	else
+		return false;
 }
 
 template <class T>
@@ -97,18 +98,15 @@ bool CLista<T>::Pop()
 }
 
 template <class T>
-void CLista<T>::Swap(CNodo<T> **&t1, CNodo<T> **&t2)
+void CLista<T>::Swap(CNodo<CCarta> *&t1, CNodo<CCarta> *&t2) 
 {
-	CNodo<T> *t3 = *t1;
-	CNodo<T> *t4 = *t2;
-	CNodo<T> *t5 = t3->m_next;
-	CNodo<T> *t6 = t4->m_next;
+	std::string Tpalo = (*t1).m_data.m_palo;
+	int Tnum = (*t1).m_data.m_numero;
 
-	*t1= t4;
-	(*t1)->m_next = t3->m_next;
-	*t2 = t3;
-	t3->m_next = t6;
-	//(*t2)->m_next = t4->m_next;
+	(*t1).m_data.m_numero = (*t2).m_data.m_numero;
+	(*t1).m_data.m_palo = (*t2).m_data.m_palo;
+	(*t2).m_data.m_numero = Tnum;
+	(*t2).m_data.m_palo = Tpalo;
 }
 
 template <class T>

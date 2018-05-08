@@ -1,8 +1,6 @@
-#ifndef CJUGADOR_H
-#define CJUGADOR_H
-
-//#include "CBaraja.h"
+#pragma once
 #include "CLista.h"
+#include "CBDescarte.h"
 
 class CJugador
 {
@@ -12,8 +10,8 @@ public:
 	CLista<CCarta> m_lista;
 	int puntuacion;
 	void calcular_puntacion();
-	//void Turno(CLista<CCarta> d, CBaraja b);
+	bool Comparar(CNodo<CCarta> *p, int num, std::string palo);
+	void Turno(CLista<CCarta> &b, CBDescarte &d);
 	~CJugador();
 };
 
-#endif 

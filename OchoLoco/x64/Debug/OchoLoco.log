@@ -1,6 +1,5 @@
 ﻿  CBaraja.cpp
-c:\users\juanv\documents\aed\ocholoco\ocholoco\cbaraja.cpp(7): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\juanv\documents\aed\aed-grupal-master\ocholoco\cbaraja.cpp(5): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   OchoLoco.cpp
   Generando código...
-c:\users\juanv\documents\aed\ocholoco\ocholoco\ocholoco.cpp(15): warning C4715: 'comparar': no todas las rutas de acceso de control devuelven un valor
-  OchoLoco.vcxproj -> C:\Users\juanv\Documents\AED\OchoLoco\x64\Debug\OchoLoco.exe
+  OchoLoco.vcxproj -> C:\Users\juanv\Documents\AED\AED-Grupal-master\x64\Debug\OchoLoco.exe

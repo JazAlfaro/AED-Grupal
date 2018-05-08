@@ -36,7 +36,7 @@
     <ClInclude Include="CJugador.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="CBarajaDescarte.h">
+    <ClInclude Include="CBDescarte.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,7 +62,7 @@
     <ClCompile Include="CJugador.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="CBarajaDescarte.cpp">
+    <ClCompile Include="CBDescarte.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

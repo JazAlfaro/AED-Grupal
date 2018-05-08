@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CBaraja.h" />
-    <ClInclude Include="CBarajaDescarte.h" />
+    <ClInclude Include="CBDescarte.h" />
     <ClInclude Include="CCarta.h" />
     <ClInclude Include="CJugador.h" />
     <ClInclude Include="CLista.h" />
@@ -158,7 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CBaraja.cpp" />
-    <ClCompile Include="CBarajaDescarte.cpp" />
+    <ClCompile Include="CBDescarte.cpp" />
     <ClCompile Include="CCarta.cpp" />
     <ClCompile Include="CJugador.cpp" />
     <ClCompile Include="CLista.cpp" />
