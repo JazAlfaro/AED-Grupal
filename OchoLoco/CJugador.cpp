@@ -40,7 +40,8 @@ void CJugador::Turno(CLista<CCarta>& b, CBDescarte &d)
 	int pos;
 	CNodo<CCarta> **p = &m_lista.m_head;
 
-	cout << endl << " Descarte ";
+	cout << endl << " Palo actual: " << d.m_palo << endl;
+	cout << " Descarte ";
 	d.m_lista.m_head->m_data.Print();
 	cout << endl;
 	m_lista.Print();
