@@ -1,9 +1,7 @@
+
 #include "stdafx.h"
 #include "CJugador.h"
 
-
-//Se cambiado el constructor,ahora cuando se crea el jugador su puntación empieza con 0
-//Se creo la funcion calcular puntuacion, esta se utilizara cuando ya no haya
 CJugador::CJugador()
 {
 	puntuacion = 0;
@@ -26,8 +24,8 @@ void CJugador::calcular_puntacion()
 		else
 			puntuacion += i->m_data.m_numero;
 }
-
-void CJugador::Turno(CLista<CCarta> b, CLista<CCarta> d)
+/*
+void CJugador::Turno(CLista<CCarta> d, CBaraja b)
 {
 	cout << "Ingresa la pos ";
 	int x;
@@ -44,4 +42,4 @@ void CJugador::Turno(CLista<CCarta> b, CLista<CCarta> d)
 			m_lista.Remove((*p)->m_data.m_numero, (*p)->m_data.m_palo);
 		}
 	}
-}
+}*/

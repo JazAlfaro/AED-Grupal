@@ -1,5 +1,8 @@
+#ifndef CLISTA_H
+#define CLISTA_H
 #pragma once
 #include "CCarta.h"
+#include "CNodo.h"
 
 template <class T>
 class CLista
@@ -19,3 +22,5 @@ public:
 	bool Pop();
 	~CLista();
 };
+
+#endif 

@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+#include "CBaraja.h"
+
 CBaraja::CBaraja()
 {
 	srand(time(NULL));
@@ -57,19 +59,7 @@ void CBaraja::Barajear(int a, int b)
 	//cout << m_size << endl;
 }
 
-void CBaraja::Barajear2()
-{
-	srand(time(NULL));
-	int a, b;
-	for (int i = 0; i < 25; i++)
-	{
-		a = (rand() % m_size);
-		b = (rand() % m_size);
-		if ((a+1 != b) || (b+1 != a))
-			Barajear(a, b);
 
-	}
-}
 
 CBaraja::~CBaraja()
 {

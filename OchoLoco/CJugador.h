@@ -1,6 +1,8 @@
-#pragma once
+#ifndef CJUGADOR_H
+#define CJUGADOR_H
+
+//#include "CBaraja.h"
 #include "CLista.h"
-#include "CBaraja.h"
 
 class CJugador
 {
@@ -10,7 +12,8 @@ public:
 	CLista<CCarta> m_lista;
 	int puntuacion;
 	void calcular_puntacion();
-	void Turno(CLista<CCarta> b, CLista<CCarta> l);
+	//void Turno(CLista<CCarta> d, CBaraja b);
 	~CJugador();
 };
 
+#endif 

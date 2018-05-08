@@ -1,4 +1,7 @@
+#ifndef CNODO_H
+#define CNODO_H
 #pragma once
+#include "CCarta.h"
 
 template <class T>
 class CNodo
@@ -10,3 +13,5 @@ public:
 	//CNodo(char num, std::string palo, CNodo<T> *s);
 	~CNodo();
 };
+
+#endif 

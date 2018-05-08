@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "CNodo.h"
-#include "CCarta.h"
 
 template <class T>
 CNodo<T>::CNodo(char num, std::string palo)

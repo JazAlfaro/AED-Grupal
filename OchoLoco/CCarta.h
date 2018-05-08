@@ -1,3 +1,5 @@
+#ifndef CCARTA_H
+#define CCARTA_H
 #pragma once
 #include "stdafx.h"
 
@@ -13,3 +15,4 @@ public:
 	~CCarta();
 };
 
+#endif 
