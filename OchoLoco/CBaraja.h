@@ -1,6 +1,7 @@
 #pragma once
 #include "CLista.h"
 #include "CJugador.h"
+#include <time.h>
 
 class CBaraja
 {
