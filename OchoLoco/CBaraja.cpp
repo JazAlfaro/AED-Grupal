@@ -31,7 +31,7 @@ void CBaraja::Repartir(CJugador ju[], int tam)//funcion para repatir las cartas,
 	}
 }
 
-void CBaraja::Barajear()//funcion encargada de barajear el mazo a partir de la lista de palos
+void CBaraja::Barajear(){//funcion encargada de barajear el mazo a partir de la lista de palos
 	CNodo<CCarta> **t1, **t2;
 	int a, b;
 	for (int i = 0; i < 23; i++) {
