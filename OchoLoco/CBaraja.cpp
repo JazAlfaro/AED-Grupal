@@ -33,9 +33,13 @@ void CBaraja::Repartir(CJugador ju[], int tam)//funcion para repatir las cartas,
 
 void CBaraja::Barajear()//funcion encargada de barajear el mazo a partir de la lista de palos
 	
-{
-	m_lista.Pop();
-	m_size--;
+{	CNodo<CCarta> **t1, **t2;
+	int a, b;
+	a = rand() % (m_size + 1);
+	b = rand() % (m_size + 1);
+	m_lista.Find(a, t1);
+	m_lista.Find(b, t2);
+	m_lista.Swap(*t1, *t2);
 }
 
 CBaraja::~CBaraja()//destructor 
