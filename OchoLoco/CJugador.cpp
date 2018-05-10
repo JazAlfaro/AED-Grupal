@@ -9,22 +9,21 @@ CJugador::CJugador()
 	puntuacion = 0;
 }
 
-
 CJugador::~CJugador()
 {
 }
 
 void CJugador::calcular_puntacion()
 {
-	for (CNodo<CCarta>* i = m_lista.m_head;i; i = i->m_next)
+	for (CNodo<CCarta>* i = m_lista.m_head; i; i = i->m_next)
+	{
 		if (i->m_data.m_numero >= 10)
 			puntuacion += 10;
 		else if (i->m_data.m_numero == 8)
-		{
 			puntuacion += 50;
-		}
 		else
 			puntuacion += i->m_data.m_numero;
+	}
 }
 
 bool CJugador::Comparar(CNodo<CCarta> *p, int num, std::string palo)
